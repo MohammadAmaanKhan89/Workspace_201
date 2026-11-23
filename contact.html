@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact — WorkSpace 201, Tariq Road, Karachi</title>
+  <meta name="description"
+    content="Contact WorkSpace 201 on Tariq Road, Karachi. Call or WhatsApp 0300 9283719 to book a seat, private room or a tour.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #12151b;
+      --concrete: #e4e6e9;
+      --mid: #8b909a;
+      --violet: #5b3df5;
+      --soft: #a99bff;
+      --d: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+      --s: "Instrument Serif", Georgia, serif;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+      margin: 0
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--concrete);
+      font: 300 1.05rem/1.6 var(--d);
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: radial-gradient(60% 50% at 90% 0, #2a2170 0, transparent 70%)
+    }
+
+    a {
+      color: inherit
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--soft);
+      outline-offset: 3px
+    }
+
+    .wrap {
+      padding: 0 clamp(1.2rem, 5vw, 5rem);
+      max-width: 90rem;
+      margin: 0 auto
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 0
+    }
+
+    nav b {
+      font-weight: 800;
+      letter-spacing: -.03em;
+      font-size: 1.15rem;
+      text-decoration: none
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: .9rem
+    }
+
+    nav .home {
+      opacity: .8;
+      transition: opacity .3s
+    }
+
+    nav .home:hover {
+      opacity: 1
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--soft);
+      margin: 3rem 0 1.4rem
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor
+    }
+
+    h1 {
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: .9;
+      font-size: clamp(3rem, 10vw, 9rem)
+    }
+
+    .serif {
+      font-family: var(--s);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -.01em
+    }
+
+    .lead {
+      font: 400 clamp(1.3rem, 2.2vw, 1.9rem)/1.25 var(--s);
+      max-width: 36rem;
+      margin-top: 1.8rem;
+      color: #c9ccd2
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: clamp(1.5rem, 5vw, 5rem);
+      margin: clamp(3rem, 7vw, 6rem) 0;
+      align-items: start
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #ffffff2b;
+      border-radius: 20px;
+      padding: 1.5rem 1.6rem;
+      background: rgba(255, 255, 255, .04);
+      transition: transform .35s, background .35s, border-color .35s
+    }
+
+    a.card:hover {
+      transform: translateY(-4px);
+      background: rgba(91, 61, 245, .18);
+      border-color: var(--soft)
+    }
+
+    .card small {
+      display: block;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: .5rem
+    }
+
+    .card .big {
+      font: 800 clamp(1.8rem, 4vw, 2.8rem)/1 var(--d);
+      letter-spacing: -.04em
+    }
+
+    .card span.sub {
+      display: block;
+      color: var(--mid);
+      margin-top: .4rem;
+      font-size: .95rem
+    }
+
+    form {
+      background: #f3f4f6;
+      color: var(--ink);
+      border-radius: 26px;
+      padding: clamp(1.4rem, 3.5vw, 2.8rem);
+      box-shadow: 0 40px 80px -40px #000
+    }
+
+    form h2 {
+      font-weight: 800;
+      letter-spacing: -.04em;
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      line-height: 1
+    }
+
+    form p {
+      color: #4a4f59;
+      margin: .6rem 0 1.6rem
+    }
+
+    label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 500;
+      margin: 1rem 0 .4rem
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      font: 400 1rem var(--d);
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid #12151b26;
+      border-radius: 12px;
+      padding: .85rem 1rem;
+      transition: border-color .25s, box-shadow .25s
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 0;
+      border-color: var(--violet);
+      box-shadow: 0 0 0 4px #5b3df522
+    }
+
+    textarea {
+      min-height: 7rem;
+      resize: vertical
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem
+    }
+
+    button {
+      font: 500 1rem var(--d);
+      cursor: pointer;
+      border: 0;
+      margin-top: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      background: var(--violet);
+      color: #fff;
+      padding: 1rem 1.7rem;
+      border-radius: 99px;
+      transition: background .3s, transform .3s
+    }
+
+    button:hover {
+      background: var(--ink);
+      transform: translateY(-3px)
+    }
+
+    .note {
+      font-size: .82rem;
+      color: #6b707a;
+      margin-top: 1rem
+    }
+
+    .hours {
+      margin-top: 1rem
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem 0;
+      border-top: 1px solid #ffffff22;
+      color: var(--mid);
+      font-size: .85rem
+    }
+
+    footer a {
+      text-decoration: none
+    }
+
+    footer a:hover {
+      color: #fff
+    }
+
+    @media(max-width:800px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .row {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto
+      }
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    img,
+    svg {
+      max-width: 100%
+    }
+
+    .grid>* {
+      min-width: 0
+    }
+
+    .card .big {
+      overflow-wrap: anywhere
+    }
+
+    @media(max-width:1000px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:800px) {
+      h1 {
+        font-size: clamp(2.8rem, 15vw, 5rem)
+      }
+
+      .eyebrow {
+        margin-top: 1.6rem
+      }
+
+      button {
+        width: 100%;
+        justify-content: space-between
+      }
+
+      footer {
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:480px) {
+      .wrap {
+        padding: 0 1.2rem
+      }
+
+      form {
+        border-radius: 20px
+      }
+
+      .card {
+        padding: 1.2rem
+      }
+
+      nav b {
+        font-size: 1rem
+      }
+    }
+
+    @media(min-width:1600px) {
+      html {
+        font-size: 112%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav aria-label="Main"><a href="WorkSpace%20201.html"><b>WorkSpace 201</b></a><a class="home"
+        href="WorkSpace%20201.html">← Back to site</a></nav>
+
+    <header>
+      <div class="eyebrow">Contact us</div>
+      <h1>Let’s find<br><span class="serif">your seat.</span></h1>
+      <p class="lead">Call, message on WhatsApp, or send a note below. Ask about open seats, private rooms or a visit to
+        the space.</p>
+    </header>
+
+    <main class="grid">
+      <div class="cards">
+        <a class="card" href="tel:+923009283719"><small>Call us</small>
+          <div class="big">0300 9283719</div><span class="sub">Tap to call</span>
+        </a>
+        <a class="card" href="https://wa.me/923009283719" target="_blank" rel="noopener"><small>WhatsApp</small>
+          <div class="big">Message us</div><span class="sub">Opens a chat on 0300 9283719</span>
+        </a>
+        <a class="card" href="https://www.google.com/maps/search/?api=1&amp;query=WorkSpace+201+Tariq+Road+Karachi"
+          target="_blank" rel="noopener"><small>Visit</small>
+          <div class="big">Tariq Road</div><span class="sub">Karachi, Pakistan · Open in Maps ↗</span>
+        </a>
+        <div class="card"><small>Pricing</small><span>Open seats from <b>PKR 16,000</b> / month<br>Private rooms from
+            <b>PKR 40,000</b> / month</span></div>
+      </div>
+
+      <form id="f" aria-labelledby="fh">
+        <h2 id="fh">Send us a message</h2>
+        <p>This opens WhatsApp with your message ready to send.</p>
+        <div class="row">
+          <div><label for="n">Name</label><input id="n" required autocomplete="name"></div>
+          <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx"></div>
+        </div>
+        <label for="t">I’m interested in</label>
+        <select id="t">
+          <option>An open seat</option>
+          <option>A private room</option>
+          <option>The meeting room</option>
+          <option>A tour of the space</option>
+          <option>Something else</option>
+        </select>
+        <label for="m">Message</label>
+        <textarea id="m" placeholder="Team size, start date, questions…"></textarea>
+        <button type="submit">Send on WhatsApp <span aria-hidden="true">→</span></button>
+        <p class="note">Prefer to talk? Call <a href="tel:+923009283719">0300 9283719</a>.</p>
+      </form>
+    </main>
+
+    <footer><span>© 2026 WorkSpace 201 · Tariq Road, Karachi</span><a href="WorkSpace%20201.html">Back to home</a>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('f').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = function (i) { return document.getElementById(i).value.trim() };
+      var t = 'Hi WorkSpace 201, I am ' + v('n') + '.' + (v('p') ? ' My number: ' + v('p') + '.' : '') + ' I am interested in: ' + v('t') + '.' + (v('m') ? ' ' + v('m') : '');
+      window.open('https://wa.me/923009283719?text=' + encodeURIComponent(t), '_blank', 'noopener');
+    });
+  </script>
+</body>
+
+</html>
