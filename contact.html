@@ -22,7 +22,9 @@
       --d: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
       --s: "Instrument Serif", Georgia, serif;
       box-sizing: border-box;
+      padding-top: 0px;
       padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: 0px;
       padding-bottom: env(safe-area-inset-bottom, 0px)
     }
 
@@ -60,6 +62,7 @@
     }
 
     .wrap {
+      padding: 0 64px;
       padding: 0 clamp(1.2rem, 5vw, 5rem);
       max-width: 90rem;
       margin: 0 auto
@@ -96,6 +99,7 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
+      grid-gap: .6rem;
       gap: .6rem;
       font-size: .78rem;
       letter-spacing: .14em;
@@ -116,6 +120,7 @@
       font-weight: 800;
       letter-spacing: -.045em;
       line-height: .9;
+      font-size: 128px;
       font-size: clamp(3rem, 10vw, 9rem)
     }
 
@@ -127,6 +132,7 @@
     }
 
     .lead {
+      font: 400 28.2px/1.25 var(--s);
       font: 400 clamp(1.3rem, 2.2vw, 1.9rem)/1.25 var(--s);
       max-width: 36rem;
       margin-top: 1.8rem;
@@ -136,13 +142,17 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
+      grid-gap: 64px;
+      gap: 64px;
       gap: clamp(1.5rem, 5vw, 5rem);
+      margin: 89.6px 0;
       margin: clamp(3rem, 7vw, 6rem) 0;
       align-items: start
     }
 
     .cards {
       display: grid;
+      grid-gap: 1rem;
       gap: 1rem
     }
 
@@ -172,6 +182,7 @@
     }
 
     .card .big {
+      font: 800 44.8px/1 var(--d);
       font: 800 clamp(1.8rem, 4vw, 2.8rem)/1 var(--d);
       letter-spacing: -.04em
     }
@@ -187,6 +198,7 @@
       background: #fbf9f4;
       color: var(--ink);
       border-radius: 26px;
+      padding: 44.8px;
       padding: clamp(1.4rem, 3.5vw, 2.8rem);
       box-shadow: 0 40px 80px -40px #000
     }
@@ -194,6 +206,7 @@
     form h2 {
       font-weight: 800;
       letter-spacing: -.04em;
+      font-size: 41.6px;
       font-size: clamp(1.8rem, 3.4vw, 2.6rem);
       line-height: 1
     }
@@ -239,6 +252,7 @@
     .row {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
       gap: 1rem
     }
 
@@ -249,6 +263,7 @@
       margin-top: 1.6rem;
       display: inline-flex;
       align-items: center;
+      grid-gap: .7rem;
       gap: .7rem;
       background: var(--violet);
       color: var(--ink);
@@ -277,6 +292,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      grid-gap: 1rem;
       gap: 1rem;
       padding: 2rem 0;
       border-top: 1px solid #ffffff22;
@@ -334,6 +350,7 @@
 
     @media(max-width:800px) {
       h1 {
+        font-size: 80px;
         font-size: clamp(2.8rem, 15vw, 5rem)
       }
 
@@ -375,7 +392,6 @@
       }
     }
 
-    /* ===== interactive map ===== */
     .leaflet-container {
       font-family: var(--d, inherit)
     }
@@ -385,6 +401,7 @@
       border: 1px solid #ffffff26;
       border-radius: 24px;
       background: rgba(255, 255, 255, .04);
+      padding: 25.6px;
       padding: clamp(1rem, 2.2vw, 1.6rem);
       max-width: 100%
     }
@@ -393,6 +410,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      grid-gap: 1rem;
       gap: 1rem;
       flex-wrap: wrap;
       margin-bottom: 1rem
@@ -403,6 +421,7 @@
       font: 800 1.25rem/1 var(--d);
       letter-spacing: -.02em;
       display: flex;
+      grid-gap: .6rem;
       gap: .6rem;
       align-items: center;
       color: #fff
@@ -417,6 +436,7 @@
 
     .mapx-tabs {
       display: flex;
+      grid-gap: .3rem;
       gap: .3rem;
       padding: .3rem;
       border-radius: 14px;
@@ -429,6 +449,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      grid-gap: 0;
       gap: 0;
       font: 500 .85rem/1 var(--d);
       color: #e3dfd4;
@@ -458,6 +479,7 @@
       position: relative;
       z-index: 0;
       isolation: isolate;
+      height: 540px;
       height: clamp(340px, 52vw, 540px);
       border-radius: 16px;
       overflow: hidden;
@@ -468,7 +490,10 @@
     .mapx-leaf,
     .mapx-view iframe {
       position: absolute;
-      inset: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border: 0
@@ -482,6 +507,7 @@
     .mapx-foot {
       display: flex;
       justify-content: space-between;
+      grid-gap: .4rem 1.2rem;
       gap: .4rem 1.2rem;
       flex-wrap: wrap;
       margin-top: .9rem;
@@ -610,6 +636,7 @@
     }
 
     .mapwrap {
+      margin: 0 0 64px;
       margin: 0 0 clamp(2rem, 5vw, 4rem)
     }
 
@@ -682,6 +709,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      grid-gap: .8rem;
       gap: .8rem;
       margin-top: 1.2rem;
       padding-top: 1.2rem;
@@ -697,6 +725,55 @@
       width: auto;
       border-radius: 8px;
       display: block
+    }
+  </style>
+  <script>(function () { var h = document.documentElement, d = document.createElement('div'); d.style.cssText = 'display:flex;flex-direction:column;row-gap:1px'; d.appendChild(document.createElement('div')); d.appendChild(document.createElement('div')); h.appendChild(d); if (d.scrollHeight !== 1) h.className += ' nfg'; h.removeChild(d); try { document.querySelector(':focus-visible') } catch (e) { h.className += ' nofv' } })();</script>
+  <style>
+    /* compatibility for older TV browsers */
+    html.nfg .eyebrow>*+* {
+      margin-left: .6rem
+    }
+
+    html.nfg button>*+* {
+      margin-left: .7rem
+    }
+
+    html.nfg footer>*:not(:last-child) {
+      margin-right: 1rem
+    }
+
+    html.nfg .mapx-head>*:not(:last-child) {
+      margin-right: 1rem
+    }
+
+    html.nfg .mapx-head h3>*+* {
+      margin-left: .6rem
+    }
+
+    html.nfg .mapx-tabs>*:not(:last-child) {
+      margin-right: .3rem
+    }
+
+    html.nfg .mapx-foot>*:not(:last-child) {
+      margin-right: 1.2rem
+    }
+
+    html.nfg footer .madeby>*+* {
+      margin-left: .8rem
+    }
+
+    html.nofv a:focus,
+    html.nofv button:focus,
+    html.nofv input:focus,
+    html.nofv select:focus,
+    html.nofv textarea:focus,
+    html.nofv summary:focus {
+      outline: 3px solid #F2A900;
+      outline-offset: 3px
+    }
+
+    html.nfg footer>span>img {
+      margin-right: 1rem
     }
   </style>
 </head>
